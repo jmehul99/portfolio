@@ -25,7 +25,7 @@ class Header extends Component {
                 <MDBNavbar style={{ backgroundColor: "rgb(17 17 17)", color: "white", postion: "relative" }} scrolling fixed="top">
                     <MDBContainer>
                         <MDBNavbarBrand style={{ fontWeight: 600, fontSize: "2rem", letterSpacing: "2px" }}>
-                            Naman
+                            Naman.
                             </MDBNavbarBrand>
                         <MDBHamburgerToggler color="white" id="hamburger1" onClick={this.toggleSingleCollapse('collapse1')} />
                         <MDBCollapse isOpen={this.state.collapse1} navbar >

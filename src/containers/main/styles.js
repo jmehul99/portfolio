@@ -1,4 +1,4 @@
-import { createStyles, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 
 
 const Styles = makeStyles((theme) => ({
@@ -11,9 +11,25 @@ const Styles = makeStyles((theme) => ({
     },
     intro: {
         fontSize: "2.6rem",
-        // [theme.breakpoints.between(744, 1127)]: { margin: "48px 0px" },
-        // [theme.breakpoints.down(743)]: { margin: "32px 0px" }
+    },
+    image: {
+        [theme.breakpoints.up("md")]: { height: "300px", width: "300px" },
+        [theme.breakpoints.only('sm')]: { height: "280px", width: "250px" },
+        [theme.breakpoints.only('xs')]: { height: "230px", width: "200px" },
+    },
+    aboutHead: {
+        [theme.breakpoints.down("sm")]: { textAlign: "center" },
+        [theme.breakpoints.up("md")]: { textAlign: "left" }
+    },
+    aboutCont: {
+        [theme.breakpoints.down("sm")]: { order: 1 },
+        [theme.breakpoints.up("md")]: { order: 2 }
+    },
+    aboutImg: {
+        [theme.breakpoints.down("sm")]: { order: 2 },
+        [theme.breakpoints.up("md")]: { order: 1 }
     }
+
 }
 ));
 

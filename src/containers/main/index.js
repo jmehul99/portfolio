@@ -1,9 +1,11 @@
 import React from 'react'
 import Header from "../../components/header"
-import { Grid, Typography, Button, Hidden } from "@material-ui/core";
+import { Grid, Typography, Button } from "@material-ui/core";
 import background from "../../images/bg.jpg";
 import Styles from "./styles.js";
-
+import naman from "../../images/me.jpeg";
+import skills from "../../content/properties"
+import Footer from "../../components/footer"
 
 function fullpage() {
     const styles = Styles()
@@ -52,20 +54,116 @@ function fullpage() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid>
-                    <Typography>NAMAN</Typography>
 
-                </Grid><Grid>
-                    <Typography>NAMAN</Typography>
+                {/* About */}
 
-                </Grid><Grid>
-                    <Typography>NAMAN</Typography>
+                <Grid container style={{
+                    paddingTop: "5rem",
+                    paddingBottom: "5rem"
+                }}>
+                    <Grid className={styles.aboutImg} item xs={12} md={5} >
+                        <Grid style={{
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",
 
-                </Grid><Grid>
-                    <Typography>NAMAN</Typography>
+                        }} >
+                            <img className={styles.image} style={{
+                                display: "block",
+                                marginLeft: "auto",
+                                marginRight: "auto",
+                                borderRadius: "5%",
+                                padding: "4px",
+                                border: "1.5px solid #d9bf77"
+                            }} src={naman}></img>
+                        </Grid>
+                    </Grid>
+                    <Grid className={styles.aboutCont} item xs={12} md={6} >
+                        <Grid style={{ paddingRight: "2rem", paddingLeft: "2rem" }}>
+                            <h2 className={styles.aboutHead} style={{
+                                paddingBottom: "10px",
+                                marginBottom: "2rem",
+                            }}> <span style={{
+                                borderBottom: "1px solid #d9bf77", fontFamily: "Poppins",
+                                fontWeight: 400,
+                                color: "#232332",
+                            }}>About me</span></h2>
+                            <Typography style={{
+                                textAlign: "left", fontWeight: 300,
+                                color: "#666",
+                                fontSize: "18px",
+                                marginBottom: "16px"
+                            }}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate fuga ipsum reprehenderit quas odio at in aut totam nam eum voluptatum quidem nulla accusantium, rerum illo voluptatem suscipit a unde.</Typography>
+
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                {/* Skill */}
+
+                <Grid container style={{
+                    paddingTop: "5rem",
+                    paddingBottom: "5rem",
+                    backgroundColor: "#f8f8f8"
+                }}>
+                    <Grid item xs={12} style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                    }}>
+                        <Typography variant={"h4"} style={{
+                            textAlign: "center", borderBottom: "1px solid #d9bf77",
+                            fontFamily: "Poppins",
+                            fontWeight: 400,
+                            color: "#232332",
+                            display: "inline-block",
+                            marginBottom: "16px",
+                            paddingBottom: "10px"
+                        }}>
+                            Skills
+                        </Typography>
+                    </Grid>
+
+                    <Grid item xs={12} style={{ paddingLeft: "10%", paddingRight: "10%" }}>
+                        {skills.map((val, index) => {
+                            return (
+                                <Grid key={index} container >
+                                    <Grid item xs={12}>
+                                        <Typography style={{
+                                            fontSize: "20px",
+                                            fontWeight: 500,
+                                            color: "#d9bf77",
+                                            marginBottom: "10px",
+                                            padding: "0px 8px"
+                                        }}>{val.skill_name}</Typography>
+                                        <Grid container style={{ marginBottom: "25px" }}>
+                                            {
+                                                val.skills.map((value, index) => {
+                                                    return (
+                                                        <Grid key={index} style={{ padding: "0px 8px" }} item xs={6} sm={4} sm={3}>
+                                                            <Typography style={{
+                                                                fontWeight: "500",
+                                                                padding: "16px 0px",
+                                                                borderBottom: "1px solid rgb(221, 221, 221)"
+                                                            }}>{value.skill}</Typography>
+                                                        </Grid>
+                                                    )
+                                                })
+                                            }
+                                        </Grid>
+
+                                    </Grid>
+                                </Grid>
+                            )
+                        })
+
+                        }
+                    </Grid>
+
 
                 </Grid>
+
             </Grid>
+            <Footer />
         </>
     )
 }
