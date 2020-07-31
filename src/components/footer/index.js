@@ -11,7 +11,7 @@ const FooterPagePro = () => {
         <MDBFooter style={{ backgroundColor: "#161619" }} className="font-small pt-0">
             <MDBContainer>
                 <MDBRow className="pt-5 mb-3 text-center d-flex justify-content-center">
-                    <MDBCol md="2" className="b-3">
+                    <MDBCol md="3" className="b-3">
                         <h6 className="title font-weight-bold">
                             <Link
                                 to="about"
@@ -23,7 +23,7 @@ const FooterPagePro = () => {
                             </Link>
                         </h6>
                     </MDBCol>
-                    <MDBCol md="2" className="b-3">
+                    <MDBCol md="3" className="b-3">
                         <h6 className="title font-weight-bold">
                             <Link
                                 to="skills"
@@ -35,7 +35,7 @@ const FooterPagePro = () => {
                             </Link>
                         </h6>
                     </MDBCol>
-                    <MDBCol md="2" className="b-3">
+                    <MDBCol md="3" className="b-3">
                         <h6 className="title font-weight-bold">
                             <Link
                                 to="projects"
@@ -52,15 +52,15 @@ const FooterPagePro = () => {
                             <a href="#!">Help</a>
                         </h6>
                     </MDBCol> */}
-                    <MDBCol md="2" className="b-3">
+                    <MDBCol md="3" className="b-3">
                         <h6 className="title font-weight-bold">
                             <Link
-                                to="contact"
+                                to="work"
                                 // spy={true}
                                 smooth={true}
                                 offset={-70}
                                 duration={900}
-                            >Contact
+                            >Work
                             </Link>
                         </h6>
                     </MDBCol>

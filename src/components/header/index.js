@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {
-    MDBNavbar, MDBContainer, MDBNavLink, MDBNavItem, MDBHamburgerToggler, MDBNavbarBrand, MDBNavbarNav,
+    MDBNavbar, MDBContainer, MDBNavItem, MDBHamburgerToggler, MDBNavbarBrand, MDBNavbarNav,
     MDBCollapse
 } from "mdbreact";
 // import { BrowserRouter as Router } from 'react-router-dom';
@@ -34,6 +34,7 @@ class Header extends Component {
                                 smooth={true}
                                 offset={-70}
                                 duration={900}
+                                isDynamic={true}
                             >Naman.
                             </Link>
                         </MDBNavbarBrand>
@@ -48,6 +49,7 @@ class Header extends Component {
                                         smooth={true}
                                         offset={-70}
                                         duration={900}
+                                        isDynamic={true}
                                     >ABOUT
                                     </Link>
                                 </MDBNavItem>
@@ -59,6 +61,7 @@ class Header extends Component {
                                         smooth={true}
                                         offset={-70}
                                         duration={900}
+                                        isDynamic={true}
                                     >SKILLS
                                     </Link>
                                 </MDBNavItem>
@@ -70,18 +73,20 @@ class Header extends Component {
                                         smooth={true}
                                         offset={-70}
                                         duration={900}
+                                        isDynamic={true}
                                     >PROJECTS
                                     </Link>
                                 </MDBNavItem>
                                 <MDBNavItem style={{ padding: "5px 0px" }}>
                                     <Link
                                         style={{ fontSize: "14px", letterSpacing: "2px", fontWeight: 400 }}
-                                        to="Contact"
+                                        to="work"
                                         spy={true}
                                         smooth={true}
                                         offset={-70}
                                         duration={900}
-                                    >CONTACT
+                                        isDynamic={true}
+                                    >WORK
                                     </Link>
                                 </MDBNavItem>
                             </MDBNavbarNav>

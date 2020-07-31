@@ -69,7 +69,7 @@ function fullpage() {
                             backgroundSize: "cover",
 
                         }} >
-                            <img className={styles.image} style={{
+                            <img className={styles.image} alt="me" style={{
                                 display: "block",
                                 marginLeft: "auto",
                                 marginRight: "auto",
@@ -190,7 +190,7 @@ function fullpage() {
                             {
                                 projects.map((val, index) => {
                                     return (
-                                        <Grid item md={4}>
+                                        <Grid key={index} item sm={6} md={4}>
                                             <Card projects={val} />
                                         </Grid>
                                     )
@@ -198,6 +198,29 @@ function fullpage() {
                             }
                         </Grid>
 
+                    </Grid>
+                </Grid>
+
+                <Grid conatiner id="work" style={{
+                    paddingTop: "5rem",
+                    paddingBottom: "5rem"
+                }}>
+                    <Grid item xs={12} style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                    }}>
+                        <Typography variant={"h4"} style={{
+                            textAlign: "center", borderBottom: "1px solid #d9bf77",
+                            fontFamily: "Poppins",
+                            fontWeight: 400,
+                            color: "#232332",
+                            display: "inline-block",
+                            marginBottom: "16px",
+                            paddingBottom: "10px"
+                        }}>
+                            Experienece
+                        </Typography>
                     </Grid>
                 </Grid>
 

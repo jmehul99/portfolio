@@ -1,16 +1,20 @@
 import React from 'react';
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon } from 'mdbreact';
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon, MDBContainer } from 'mdbreact';
+import { Grid, Typography, Button } from "@material-ui/core";
+import Styles from "./styles.js";
+
 
 const CardExample = (props) => {
     const project = props.projects
+    const styles = Styles()
+
     return (
-        <MDBRow>
-
-
+        <MDBRow >
             <MDBCol style={{ marginBottom: "1rem", marginTop: "1rem" }}>
-                <MDBCard narrow>
+                <MDBCard narrow >
                     <MDBView cascade>
                         <MDBCardImage
+                            style={{ zIndex: -0.2 }}
                             hover
                             overlay='white-slight'
                             className='card-img-top'
@@ -19,27 +23,46 @@ const CardExample = (props) => {
                         />
                     </MDBView>
 
-                    <MDBCardBody>
-                        <h5 className='pink-text'>
-                            <MDBIcon icon='utensils' /> {project.name}
+                    <MDBCardBody className={styles.cardContent} style={{ backgroundColor: "black", marginTop: "-15px", zIndex: "1" }}>
+                        <h5 style={{ color: "rgb(217, 191, 119)" }}>
+                            <MDBIcon icon={project.icon} /> {project.name}
                         </h5>
 
-                        <MDBCardTitle className='font-weight-bold'>
-                            Cheat day inspirations
+                        <MDBCardTitle style={{ color: "white" }}>
+                            <Grid container style={{
+                                display: "flex",
+                                justifyContent: "space-around"
+                            }} >
+                                {
+                                    project.tech.map((val, index) => {
+                                        return (
+                                            <Grid key={index} style={{
+                                                fontSize: "15px",
+                                                color: "rgb(131 131 159)",
+                                                border: "1.5px solid #8181c6",
+                                                borderRadius: "1em",
+                                                padding: "0.4em",
+                                                margin: "1px",
+                                                marginTop: "1rem"
+
+                                            }} item xs={5} sm={3}>{val.tech_name}</Grid>
+                                        )
+                                    })
+                                }
+                            </Grid>
                         </MDBCardTitle>
 
-                        <MDBCardText>
-                            Sed ut perspiciatis unde omnis iste natus sit voluptatem
-                            accusantium doloremque laudantium, totam rem aperiam.
+                        <MDBCardText style={{ color: "white" }} >
+                            {project.description}
                         </MDBCardText>
 
-                        <MDBBtn color='unique'>Button</MDBBtn>
+                        <MDBBtn color="" style={{ backgroundColor: "rgb(217, 191, 119)", borderRadius: "10em", color: "white" }} >Visit</MDBBtn>
                     </MDBCardBody>
                 </MDBCard>
             </MDBCol>
 
 
-        </MDBRow>
+        </MDBRow >
     )
 }
 
