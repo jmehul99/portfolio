@@ -1,27 +1,50 @@
-import React, { useRef } from "react";
+import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const FooterPagePro = () => {
+
     return (
         <MDBFooter style={{ backgroundColor: "#161619" }} className="font-small pt-0">
             <MDBContainer>
                 <MDBRow className="pt-5 mb-3 text-center d-flex justify-content-center">
                     <MDBCol md="2" className="b-3">
                         <h6 className="title font-weight-bold">
-                            <a href="#!">About me</a>
+                            <Link
+                                to="about"
+                                // spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={900}
+                            >About
+                            </Link>
                         </h6>
                     </MDBCol>
                     <MDBCol md="2" className="b-3">
                         <h6 className="title font-weight-bold">
-                            <a href="#!">Skills</a>
+                            <Link
+                                to="skills"
+                                // spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={900}
+                            >Skills
+                            </Link>
                         </h6>
                     </MDBCol>
                     <MDBCol md="2" className="b-3">
                         <h6 className="title font-weight-bold">
-                            <a href="#!">Projects</a>
+                            <Link
+                                to="projects"
+                                // spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={900}
+                            >Projects
+                            </Link>
                         </h6>
                     </MDBCol>
                     {/* <MDBCol md="2" className="b-3">
@@ -31,7 +54,14 @@ const FooterPagePro = () => {
                     </MDBCol> */}
                     <MDBCol md="2" className="b-3">
                         <h6 className="title font-weight-bold">
-                            <a href="#!">Contact</a>
+                            <Link
+                                to="contact"
+                                // spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={900}
+                            >Contact
+                            </Link>
                         </h6>
                     </MDBCol>
                 </MDBRow>

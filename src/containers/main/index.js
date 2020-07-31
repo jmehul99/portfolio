@@ -4,15 +4,17 @@ import { Grid, Typography, Button } from "@material-ui/core";
 import background from "../../images/bg.jpg";
 import Styles from "./styles.js";
 import naman from "../../images/me.jpeg";
-import skills from "../../content/properties"
-import Footer from "../../components/footer"
+import skills from "../../content/properties";
+import Footer from "../../components/footer";
+import Card from "../../components/projects";
+import projects from "../../content/projects"
 
 function fullpage() {
     const styles = Styles()
     return (
         <>
 
-            <Grid>
+            <Grid id="main">
                 <Grid style={{
                     backgroundImage: `url(${background})`,
                     backgroundRepeat: "no-repeat",
@@ -50,14 +52,14 @@ function fullpage() {
                         <Grid item>
                             <Button variant="contained" style={{ backgroundColor: "rgb(218, 191, 120)", color: "white", borderRadius: "10em" }}>
                                 Download CV
-</Button>
+                            </Button>
                         </Grid>
                     </Grid>
                 </Grid>
 
                 {/* About */}
 
-                <Grid container style={{
+                <Grid id="about" container style={{
                     paddingTop: "5rem",
                     paddingBottom: "5rem"
                 }}>
@@ -100,7 +102,7 @@ function fullpage() {
 
                 {/* Skill */}
 
-                <Grid container style={{
+                <Grid id="skills" container style={{
                     paddingTop: "5rem",
                     paddingBottom: "5rem",
                     backgroundColor: "#f8f8f8"
@@ -155,12 +157,50 @@ function fullpage() {
                                 </Grid>
                             )
                         })
-
                         }
                     </Grid>
-
-
                 </Grid>
+
+                {/* Projects */}
+
+                <Grid id="projects" container style={{
+                    paddingTop: "5rem",
+                    paddingBottom: "5rem",
+                }}>
+                    <Grid item xs={12} style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                    }}>
+                        <Typography variant={"h4"} style={{
+                            textAlign: "center", borderBottom: "1px solid #d9bf77",
+                            fontFamily: "Poppins",
+                            fontWeight: 400,
+                            color: "#232332",
+                            display: "inline-block",
+                            marginBottom: "16px",
+                            paddingBottom: "10px"
+                        }}>
+                            Projects
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} style={{ paddingLeft: "10%", paddingRight: "10%" }}>
+
+                        <Grid container spacing={2}>
+                            {
+                                projects.map((val, index) => {
+                                    return (
+                                        <Grid item md={4}>
+                                            <Card projects={val} />
+                                        </Grid>
+                                    )
+                                })
+                            }
+                        </Grid>
+
+                    </Grid>
+                </Grid>
+
 
             </Grid>
             <Footer />
