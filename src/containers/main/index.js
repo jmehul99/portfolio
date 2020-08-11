@@ -25,9 +25,12 @@ function fullpage() {
                     backgroundImage: `url(${background})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
+                    overflow: "hidden",
                     height: "100vh"
                 }}>
-                    <Header />
+                    <Grid style={{ overflow: "hidden" }}>
+                        <Header />
+                    </Grid>
                     <Grid container className={styles.container} style={{
                         width: "100%",
                         paddingRight: "15px",
