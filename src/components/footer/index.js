@@ -3,7 +3,7 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 const FooterPagePro = () => {
 
@@ -69,12 +69,7 @@ const FooterPagePro = () => {
                 <MDBRow className="d-flex text-center justify-content-center mb-md-0 mb-4">
                     <MDBCol md="8" sm="12" className="mt-5">
                         <p style={{ lineHeight: "1.7rem" }}>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                            quae ab illo inventore veritatis et quasi architecto beatae
-                            vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                            voluptas sit aspernatur aut odit aut fugit, sed quia
-                            consequuntur.
+                            I would be glad if you contacted me. I am always looking for new challenges that allow me to improve my skills.
             </p>
                     </MDBCol>
                 </MDBRow>
@@ -82,26 +77,27 @@ const FooterPagePro = () => {
                 <MDBRow className="pb-3">
                     <MDBCol md="12">
                         <div className="mb-5 flex-center">
-                            <a className="fb-ic">
+                            <a className="fb-ic" href="https://www.facebook.com/namanjain2912">
                                 <i style={{ marginRight: "6px", marginLeft: "6px" }} className="fab fa-facebook-f fa-lg white-text mr-md-4"> </i>
                             </a>
-                            {/* <a className="tw-ic">
-                                <i style={{ marginRight: "6px", marginLeft: "6px" }} className="fab fa-twitter fa-lg white-text mr-md-4"> </i>
-                            </a> */}
-                            <a className="bit-bucket">
+                            <a href="https://instagram.com/notty.naman?igshid=88j4nhpo64vd" className="ins-ic">
+                                <i style={{ marginRight: "6px", marginLeft: "6px" }} className="fab fa-instagram fa-lg white-text mr-md-4"> </i>
+                            </a>
+                            <a href="#!" className="li-ic">
+                                <i style={{ marginRight: "6px", marginLeft: "6px" }} className="fab fa-linkedin-in fa-lg white-text mr-md-4"> </i>
+                            </a>
+                            <a href="https://bitbucket.org/namanj29/" className="bit-bucket">
                                 <i style={{ marginRight: "6px", marginLeft: "6px" }} className="fab fa-bitbucket fa-lg white-text mr-md-4">
 
                                 </i>
                             </a>
-                            <a className="li-ic">
-                                <i style={{ marginRight: "6px", marginLeft: "6px" }} className="fab fa-linkedin-in fa-lg white-text mr-md-4"> </i>
+                            <a href="https://github.com/namanjain29" className="git-hub">
+                                <i style={{ marginRight: "6px", marginLeft: "6px" }} className="fab fa-github fa-lg white-text mr-md-4"> </i>
                             </a>
-                            <a className="ins-ic">
-                                <i style={{ marginRight: "6px", marginLeft: "6px" }} className="fab fa-instagram fa-lg white-text mr-md-4"> </i>
+                            <a href="mailto: namanjain2912@gmail.com">
+                                <i style={{ marginRight: "6px", marginLeft: "6px", color: "white" }} className="far fa-envelope fa-lg white-text mr-md-4"> </i>
                             </a>
-                            <a className="git-hub">
-                                <i style={{ marginRight: "6px", marginLeft: "6px" }} className="fab fa-github fa-lg white-text"> </i>
-                            </a>
+
                         </div>
                     </MDBCol>
                 </MDBRow>
@@ -109,7 +105,7 @@ const FooterPagePro = () => {
             <div className="footer-copyright text-center py-3">
                 <MDBContainer fluid>
                     &copy; {new Date().getFullYear()} Copyright:
-          <a href="https://www.MDBootstrap.com"> Naman Jain </a>
+          <span> Naman Jain </span>
                 </MDBContainer>
             </div>
         </MDBFooter>

@@ -3,19 +3,18 @@ import {
     MDBNavbar, MDBContainer, MDBNavItem, MDBHamburgerToggler, MDBNavbarBrand, MDBNavbarNav,
     MDBCollapse
 } from "mdbreact";
-// import { BrowserRouter as Router } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import "./styles.css"
-
+import '../../../node_modules/aos/dist/aos.css';
+import AOS from 'aos';
 
 class Header extends Component {
     state = {
         collapse1: ''
     }
-
     toggleSingleCollapse = collapseId => () => {
         this.setState({
             [collapseId]: !this.state[collapseId]
@@ -23,12 +22,15 @@ class Header extends Component {
     };
 
     render() {
+
+        AOS.init();
+
         return (
             // <Router style={{ position: "sticky" }}>
             <>
                 <MDBNavbar style={{ backgroundColor: "rgb(17 17 17)", color: "white", postion: "relative" }} scrolling fixed="top">
                     <MDBContainer>
-                        <MDBNavbarBrand >
+                        <MDBNavbarBrand data-aos="zoom-in" data-aos-duration="900">
                             <Link style={{ fontWeight: 600, fontSize: "2rem", letterSpacing: "2px" }}
                                 to="main"
                                 smooth={true}

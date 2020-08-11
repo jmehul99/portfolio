@@ -8,9 +8,14 @@ import skills from "../../content/properties";
 import Footer from "../../components/footer";
 import Card from "../../components/projects";
 import projects from "../../content/projects"
+import experience from "../../content/experience";
+import Work from "../../components/experience"
+import '../../../node_modules/aos/dist/aos.css';
+import AOS from 'aos';
 
 function fullpage() {
     const styles = Styles()
+    AOS.init();
     return (
         <>
 
@@ -30,7 +35,7 @@ function fullpage() {
                         marginLeft: "auto"
                     }} >
                         <Grid item sm={12}>
-                            <Typography variant="h1" className={styles.intro} style={{
+                            <Typography data-aos="fade-right" data-aos-duration="1200" variant="h1" className={styles.intro} style={{
                                 fontWeight: 400,
                                 color: "white",
                                 marginBottom: "1rem",
@@ -40,7 +45,7 @@ function fullpage() {
 
                             </Typography>
 
-                            <Typography variant="h1" style={{
+                            <Typography data-aos="fade-left" data-aos-duration="1200" variant="h1" style={{
                                 fontWeight: 400,
                                 marginBottom: "4rem",
                                 color: "white"
@@ -50,7 +55,7 @@ function fullpage() {
                         </Grid>
 
                         <Grid item>
-                            <Button variant="contained" style={{ backgroundColor: "rgb(218, 191, 120)", color: "white", borderRadius: "10em" }}>
+                            <Button data-aos="fade-down" data-aos-duration="1200" variant="contained" style={{ backgroundColor: "rgb(218, 191, 120)", color: "white", borderRadius: "10em" }}>
                                 Download CV
                             </Button>
                         </Grid>
@@ -69,7 +74,7 @@ function fullpage() {
                             backgroundSize: "cover",
 
                         }} >
-                            <img className={styles.image} alt="me" style={{
+                            <img data-aos="flip-down" data-aos-duration="1200" className={styles.image} alt="me" style={{
                                 display: "block",
                                 marginLeft: "auto",
                                 marginRight: "auto",
@@ -79,7 +84,7 @@ function fullpage() {
                             }} src={naman}></img>
                         </Grid>
                     </Grid>
-                    <Grid className={styles.aboutCont} item xs={12} md={6} >
+                    <Grid data-aos="fade-down" data-aos-duration="1200" className={styles.aboutCont} item xs={12} md={6} >
                         <Grid style={{ paddingRight: "2rem", paddingLeft: "2rem" }}>
                             <h2 className={styles.aboutHead} style={{
                                 paddingBottom: "10px",
@@ -94,7 +99,15 @@ function fullpage() {
                                 color: "#666",
                                 fontSize: "18px",
                                 marginBottom: "16px"
-                            }}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate fuga ipsum reprehenderit quas odio at in aut totam nam eum voluptatum quidem nulla accusantium, rerum illo voluptatem suscipit a unde.</Typography>
+                            }}>A Full-stack Web Developer who is motivated to constantly develop new skills and grow professionally.
+                            </Typography>
+                            <ul>
+                                <li>Sophomore undergraduate at <b>University School of Information and Communication Technology.</b></li>
+                                <li>CBSE XII Boards  - <b>St. Joseph's Academy, Savita Vihar</b></li>
+                                <li>Scored <b>714</b> rank in IPUCET </li>
+                                <li>Scored <b>95% in Maths</b> and <b>94% in Physics</b> in CBSE XII boards</li>
+                                <li>Scored <b>10 CGPA</b> in CBSE X boards </li>
+                            </ul>
 
                         </Grid>
                     </Grid>
@@ -107,7 +120,7 @@ function fullpage() {
                     paddingBottom: "5rem",
                     backgroundColor: "#f8f8f8"
                 }}>
-                    <Grid item xs={12} style={{
+                    <Grid data-aos="zoom-in" data-aos-duration="1200" item xs={12} style={{
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center"
@@ -167,7 +180,7 @@ function fullpage() {
                     paddingTop: "5rem",
                     paddingBottom: "5rem",
                 }}>
-                    <Grid item xs={12} style={{
+                    <Grid data-aos="zoom-in" data-aos-duration="1200" item xs={12} style={{
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center"
@@ -186,7 +199,7 @@ function fullpage() {
                     </Grid>
                     <Grid item xs={12} style={{ paddingLeft: "10%", paddingRight: "10%" }}>
 
-                        <Grid container spacing={2}>
+                        <Grid container spacing={4}>
                             {
                                 projects.map((val, index) => {
                                     return (
@@ -201,11 +214,11 @@ function fullpage() {
                     </Grid>
                 </Grid>
 
-                <Grid conatiner id="work" style={{
+                <Grid container id="work" style={{
                     paddingTop: "5rem",
                     paddingBottom: "5rem"
                 }}>
-                    <Grid item xs={12} style={{
+                    <Grid item data-aos="zoom-in" data-aos-duration="1200" xs={12} style={{
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center"
@@ -222,6 +235,20 @@ function fullpage() {
                             Experienece
                         </Typography>
                     </Grid>
+
+                    <Grid item xs={12} style={{ paddingLeft: "10%", paddingRight: "10%", paddingTop: "30px" }}>
+                        {
+                            experience.map((val, index) => {
+                                return (
+
+                                    <Work key={index} work={val} />
+
+                                )
+                            })
+                        }
+                    </Grid>
+
+
                 </Grid>
 
 

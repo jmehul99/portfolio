@@ -1,8 +1,39 @@
+import codecollab from "../images/codecollab.jpg";
+import taskmanager from "../images/task-manager.jpg"
+import restraunt from "../images/restraunt.jpg"
+import time from "../images/time.jpg"
+import weather from "../images/weather.jpg"
+
 const projects = [
+
+    {
+        name: "Code-collab",
+        icon: "code",
+        pic: codecollab,
+        link: "https://codecollab-3a539.web.app/",
+        description: `A platform which enables multiple users to write code at the same time.
+         It can also be used in coding interviews where a interviewer can watch the live code of the applicant.`,
+        tech: [
+            {
+                tech_name: "React",
+            },
+            {
+                tech_name: "Google-Auth",
+            },
+            {
+                tech_name: "Firebase",
+            },
+            {
+                tech_name: "Real-time Db"
+            }
+        ]
+    },
     {
         name: "Everyday AQi and Weather",
         icon: "cloud-sun-rain",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate nesciunt vitae repellendus accusamus facilis omnis assumenda blanditiis. Harum commodi ex placeat distinctio quam, voluptate similique molestiae accusantium rem eveniet.",
+        pic: weather,
+        link: "https://naman-weather-application.herokuapp.com/",
+        description: "It is an open API based application which provides the current climatic conditions and Air quality index of any given location all over the world.",
         tech: [
             {
                 tech_name: "Bootstrap",
@@ -21,7 +52,9 @@ const projects = [
     {
         name: "Task-Manager",
         icon: "calendar-check",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate nesciunt vitae repellendus accusamus facilis omnis assumenda blanditiis. Harum commodi ex placeat distinctio quam, voluptate similique molestiae accusantium rem eveniet.",
+        pic: taskmanager,
+        link: "#",
+        description: "It is an application which enables each user to maintain their own records of task using login authentication. A user can easily create, update and delete task his/her tasks",
         tech: [
             {
                 tech_name: "Nodejs",
@@ -40,7 +73,9 @@ const projects = [
     {
         name: "ZEIT",
         icon: "clock",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate nesciunt vitae repellendus accusamus facilis omnis assumenda blanditiis. Harum commodi ex placeat distinctio quam, voluptate similique molestiae accusantium rem eveniet.",
+        pic: time,
+        link: "https://namanjain29.github.io/German_time.github.io/",
+        description: "It is an application for German language learners which converts the time into german language Official and Inofficial time format.",
         tech: [
             {
                 tech_name: "Javascript",
@@ -50,13 +85,21 @@ const projects = [
             },
             {
                 tech_name: "Jquery",
+            },
+            {
+                tech_name: "HTML",
+            },
+            {
+                tech_name: "CSS",
             }
         ]
     },
     {
         name: "Restraunt",
         icon: "utensils",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate nesciunt vitae repellendus accusamus facilis omnis assumenda blanditiis. Harum commodi ex placeat distinctio quam, voluptate similique molestiae accusantium rem eveniet.",
+        pic: restraunt,
+        link: "#",
+        description: "A website which enables user to place order, to book table in advance and also to provide feedback of each dish. ",
         tech: [
             {
                 tech_name: "Nodejs",
@@ -65,7 +108,7 @@ const projects = [
                 tech_name: "MongoDb",
             },
             {
-                tech_name: "ReactJs",
+                tech_name: "React",
             },
             {
                 tech_name: "Express.js",
