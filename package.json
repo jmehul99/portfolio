@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "ace-builds": "^1.4.12",
     "aos": "^2.3.4",
+    "firebase": "^7.17.2",
     "mdbootstrap": "^4.19.1",
     "mdbreact": "^4.27.0",
     "react": "^16.13.1",

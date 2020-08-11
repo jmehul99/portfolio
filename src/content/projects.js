@@ -12,7 +12,7 @@ const projects = [
         pic: codecollab,
         link: "https://codecollab-3a539.web.app/",
         description: `A platform which enables multiple users to write code at the same time.
-         It can also be used in coding interviews where a interviewer can watch the live code of the applicant.`,
+         It can also be used in coding interviews where an interviewer can watch the live code of the applicant.`,
         tech: [
             {
                 tech_name: "React",
@@ -29,7 +29,7 @@ const projects = [
         ]
     },
     {
-        name: "Everyday AQi and Weather",
+        name: "Everyday AQI and Weather",
         icon: "cloud-sun-rain",
         pic: weather,
         link: "https://naman-weather-application.herokuapp.com/",
@@ -53,7 +53,7 @@ const projects = [
         name: "Task-Manager",
         icon: "calendar-check",
         pic: taskmanager,
-        link: "#",
+        link: "https://github.com/namanjain29/Task-Manager-api.git",
         description: "It is an application which enables each user to maintain their own records of task using login authentication. A user can easily create, update and delete task his/her tasks",
         tech: [
             {
@@ -98,7 +98,7 @@ const projects = [
         name: "Restraunt",
         icon: "utensils",
         pic: restraunt,
-        link: "#",
+        link: "https://github.com/namanjain29/Restraunt-react.git",
         description: "A website which enables user to place order, to book table in advance and also to provide feedback of each dish. ",
         tech: [
             {

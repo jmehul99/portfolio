@@ -83,7 +83,7 @@ const FooterPagePro = () => {
                             <a href="https://instagram.com/notty.naman?igshid=88j4nhpo64vd" className="ins-ic">
                                 <i style={{ marginRight: "6px", marginLeft: "6px" }} className="fab fa-instagram fa-lg white-text mr-md-4"> </i>
                             </a>
-                            <a href="#!" className="li-ic">
+                            <a href="https://www.linkedin.com/in/naman-jain-7b4b4a1a9" className="li-ic">
                                 <i style={{ marginRight: "6px", marginLeft: "6px" }} className="fab fa-linkedin-in fa-lg white-text mr-md-4"> </i>
                             </a>
                             <a href="https://bitbucket.org/namanj29/" className="bit-bucket">

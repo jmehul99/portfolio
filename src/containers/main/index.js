@@ -12,6 +12,7 @@ import experience from "../../content/experience";
 import Work from "../../components/experience"
 import '../../../node_modules/aos/dist/aos.css';
 import AOS from 'aos';
+import resume from "../../content/resume.docx"
 
 function fullpage() {
     const styles = Styles()
@@ -55,9 +56,11 @@ function fullpage() {
                         </Grid>
 
                         <Grid item>
-                            <Button data-aos="fade-down" data-aos-duration="1200" variant="contained" style={{ backgroundColor: "rgb(218, 191, 120)", color: "white", borderRadius: "10em" }}>
-                                Download CV
+                            <a href={resume} download="resume">
+                                <Button data-aos="fade-down" data-aos-duration="1200" variant="contained" style={{ backgroundColor: "rgb(218, 191, 120)", color: "white", borderRadius: "10em" }}>
+                                    Download CV
                             </Button>
+                            </a>
                         </Grid>
                     </Grid>
                 </Grid>
